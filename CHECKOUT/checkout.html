@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout | T3XAS</title>
+  <link rel="stylesheet" href="../CSS/mains.css">
+</head>
+<body>
+  <div class="overlay">
+    <section class="topbar-promo">
+      <div class="topbar-track">
+        <span>Compra segura</span>
+        <span>Medios de pago disponibles</span>
+        <span>Confirmación rápida</span>
+        <span>Atención personalizada</span>
+        <span>Compra segura</span>
+      </div>
+    </section>
+
+    <header class="header-principal">
+      <div class="logo-contenedor">
+        <img src="../IMG/LOGO.png" alt="Logo T3XAS" class="logo-img">
+      </div>
+
+      <p class="submarca">Finalizar compra</p>
+
+      <nav>
+        <a href="../TIENDA/index.html">Inicio</a>
+        <a href="../PRODUCTOS/productos.html">Productos</a>
+        <a href="../CARRITO/carrito.html">Carrito <span id="contador-carrito" class="contador-carrito">0</span></a>
+        <a href="../CHECKOUT/checkout.html">Checkout</a>
+      </nav>
+    </header>
+
+    <main class="pagina-secundaria reveal">
+      <a href="../CARRITO/carrito.html" class="btn-volver premium-back">
+        <span class="arrow-wrap">
+          <span class="arrow-line"></span>
+          <span class="arrow-head"></span>
+        </span>
+        <span>Volver al carrito</span>
+      </a>
+
+      <div class="checkout-grid">
+        <section class="checkout-form-box">
+          <h1>Finalizar compra</h1>
+          <p class="checkout-subtexto">Completá tus datos para confirmar el pedido.</p>
+
+          <form class="form-checkout" id="form-checkout">
+            <label for="nombre">Nombre y apellido</label>
+            <input id="nombre" type="text" required>
+
+            <label for="telefono">Teléfono</label>
+            <input id="telefono" type="tel" required>
+
+            <label for="direccion">Dirección</label>
+            <input id="direccion" type="text" required>
+
+            <label for="ciudad">Ciudad</label>
+            <input id="ciudad" type="text" required>
+
+            <label for="pago">Método de pago</label>
+            <select id="pago" required>
+              <option value="">Seleccionar</option>
+              <option value="tarjeta">Tarjeta de crédito / débito</option>
+              <option value="transferencia">Transferencia bancaria</option>
+              <option value="mercado-pago">Mercado Pago</option>
+              <option value="efectivo">Efectivo contra entrega</option>
+            </select>
+
+            <div class="metodos-pago">
+              <div class="metodo-card">Tarjeta</div>
+              <div class="metodo-card">Transferencia</div>
+              <div class="metodo-card">Mercado Pago</div>
+              <div class="metodo-card">Efectivo</div>
+            </div>
+
+            <div id="bloque-tarjeta" class="bloque-pago oculto">
+              <h3>Datos de la tarjeta</h3>
+
+              <label for="titular">Nombre del titular</label>
+              <input id="titular" type="text" placeholder="Como figura en la tarjeta">
+
+              <label for="numero-tarjeta">Número de tarjeta</label>
+              <input id="numero-tarjeta" type="text" maxlength="19" placeholder="1234 5678 9012 3456">
+
+              <div class="fila-campos">
+                <div>
+                  <label for="vencimiento">Vencimiento</label>
+                  <input id="vencimiento" type="text" maxlength="5" placeholder="MM/AA">
+                </div>
+
+                <div>
+                  <label for="cvv">CVV</label>
+                  <input id="cvv" type="text" maxlength="4" placeholder="123">
+                </div>
+              </div>
+            </div>
+
+            <div id="bloque-transferencia" class="bloque-pago oculto">
+              <h3>Datos para transferencia</h3>
+
+              <div class="info-pago">
+                <p><strong>Alias:</strong> texas.tienda.oficial</p>
+                <p><strong>CBU:</strong> 0000003100000000000001</p>
+                <p><strong>Titular:</strong> Texas</p>
+              </div>
+
+              <p class="mensaje-pago">
+                El pedido será confirmado una vez que el dinero haya ingresado correctamente
+                en la cuenta bancaria de Texas.
+              </p>
+
+              <label for="comprobante">Adjuntar comprobante de transferencia</label>
+              <input id="comprobante" type="file" accept=".jpg,.jpeg,.png,.pdf">
+            </div>
+
+            <div id="bloque-mp" class="bloque-pago oculto">
+              <h3>Pago con Mercado Pago</h3>
+              <p class="mensaje-pago">
+                Vas a poder continuar el pago desde tu cuenta de Mercado Pago de forma segura.
+              </p>
+
+              <a href="#" class="btn-mp" id="btn-mp-link">Vincular Mercado Pago</a>
+            </div>
+
+            <div id="bloque-efectivo" class="bloque-pago oculto">
+              <h3>Pago en efectivo</h3>
+              <p class="mensaje-pago">
+                El pago se realizará contra entrega, sujeto a coordinación previa con Texas.
+              </p>
+            </div>
+
+            <label for="comentarios">Comentarios del pedido</label>
+            <textarea id="comentarios" rows="4" placeholder="Observaciones, referencias o detalles adicionales..."></textarea>
+
+            <button type="submit">Confirmar compra</button>
+          </form>
+        </section>
+
+        <aside class="checkout-resumen-box">
+          <h2>Resumen del pedido</h2>
+          <div id="resumen-checkout"></div>
+        </aside>
+      </div>
+    </main>
+  </div>
+
+  <div id="toast" class="toast">Compra confirmada correctamente</div>
+
+  <script src="../JS/productos.js"></script>
+  <script src="../JS/carrito.js"></script>
+  <script src="../JS/checkout.js"></script>
+  <script src="../JS/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Productos | T3XAS</title>
+  <link rel="stylesheet" href="../CSS/productos.css">
+</head>
+<body>
+  <div class="overlay">
+    <section class="topbar-promo">
+      <div class="topbar-track">
+        <span>Envíos personalizados</span>
+        <span>Atención cercana</span>
+        <span>Nuevas colecciones</span>
+        <span>Compra simple y segura</span>
+        <span>Calidad y estilo Texas</span>
+        <span>Envíos personalizados</span>
+      </div>
+    </section>
+
+    <header class="header-principal">
+      <div class="logo-contenedor">
+        <img src="../IMG/LOGO.png" alt="Logo T3XAS" class="logo-img">
+      </div>
+
+      <p class="submarca">Catálogo de productos</p>
+
+      <nav>
+        <a href="../TIENDA/index.html">Inicio</a>
+        <a href="../PRODUCTOS/productos.html">Productos</a>
+        <a href="../CARRITO/carrito.html">Carrito <span id="contador-carrito" class="contador-carrito">0</span></a>
+        <a href="../CHECKOUT/checkout.html">Checkout</a>
+      </nav>
+    </header>
+
+    <main class="contenedor-productos">
+      <a href="../TIENDA/index.html" class="btn-volver premium-back">
+        <span class="arrow-wrap">
+          <span class="arrow-line"></span>
+          <span class="arrow-head"></span>
+        </span>
+        <span>Volver al inicio</span>
+      </a>
+
+      <section class="barra-superior reveal">
+        <div>
+          <p class="barra-tag">Colección Texas</p>
+          <h1>Catálogo western</h1>
+        </div>
+        <input type="text" id="buscador" placeholder="Buscar producto...">
+      </section>
+
+      <section class="filtros-categorias reveal">
+        <button class="filtro-btn active" data-categoria="todas">Todas</button>
+        <button class="filtro-btn" data-categoria="vasos">Vasos</button>
+        <button class="filtro-btn" data-categoria="licuadoras">Licuadoras</button>
+        <button class="filtro-btn" data-categoria="yogurteras">Yogurteras</button>
+        <button class="filtro-btn" data-categoria="pavas-electricas">Pavas Eléctricas</button>
+      </section>
+
+      <div id="productos"></div>
+    </main>
+
+    <footer class="footer-principal">
+      <div class="footer-grid">
+        <div>
+          <h3>T3XAS</h3>
+          <p>Una tienda online con identidad, estilo y esencia propia.</p>
+        </div>
+
+        <div>
+          <h4>Categorías</h4>
+          <a href="../PRODUCTOS/productos.html?categoria=vasos">Vasos</a>
+          <a href="../PRODUCTOS/productos.html?categoria=licuadoras">Licuadoras</a>
+          <a href="../PRODUCTOS/productos.html?categoria=yogurteras">Yogurteras</a>
+          <a href="../PRODUCTOS/productos.html?categoria=pavas-electricas">Pavas eléctricas</a>
+        </div>
+
+        <div>
+          <h4>Texas</h4>
+          <p>@juandelpuerto16</p>
+          <p>@solee_palavecino</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <div id="toast" class="toast">Producto agregado al carrito</div>
+  <div class="cursor-glow"></div>
+
+  <script src="../JS/productos.js"></script>
+  <script src="../JS/carrito.js"></script>
+  <script src="../JS/buscador.js"></script>
+  <script src="../JS/app.js"></script>
+</body>
+</html>

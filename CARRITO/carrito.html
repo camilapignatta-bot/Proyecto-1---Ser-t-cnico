@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrito | T3XAS</title>
+  <link rel="stylesheet" href="../CSS/mains.css">
+</head>
+<body>
+  <div class="overlay">
+    <section class="topbar-promo">
+      <div class="topbar-track">
+        <span>Envíos personalizados</span>
+        <span>Atención cercana</span>
+        <span>Nuevas colecciones</span>
+        <span>Compra simple y segura</span>
+        <span>Calidad y estilo Texas</span>
+      </div>
+    </section>
+
+    <header class="header-principal">
+      <div class="logo-contenedor">
+        <img src="../IMG/LOGO.png" alt="Logo T3XAS" class="logo-img">
+      </div>
+
+      <p class="submarca">Carrito de compras</p>
+
+      <nav>
+        <a href="../TIENDA/index.html">Inicio</a>
+        <a href="../PRODUCTOS/productos.html">Productos</a>
+        <a href="../CARRITO/carrito.html">Carrito <span id="contador-carrito" class="contador-carrito">0</span></a>
+        <a href="../CHECKOUT/checkout.html">Checkout</a>
+      </nav>
+    </header>
+
+    <main class="pagina-secundaria reveal">
+      <a href="../PRODUCTOS/productos.html" class="btn-volver premium-back">
+        <span class="arrow-wrap">
+          <span class="arrow-line"></span>
+          <span class="arrow-head"></span>
+        </span>
+        <span>Volver a productos</span>
+      </a>
+
+      <h1>🛒 Tu carrito</h1>
+      <div id="carrito"></div>
+    </main>
+  </div>
+
+  <div id="toast" class="toast">Producto agregado al carrito</div>
+
+  <script src="../JS/productos.js"></script>
+  <script src="../JS/carrito.js"></script>
+  <script src="../JS/app.js"></script>
+</body>
+</html>
