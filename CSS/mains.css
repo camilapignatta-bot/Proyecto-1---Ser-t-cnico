@@ -64,24 +64,34 @@ body::after{
 }
 
 .topbar-promo{
+  width: 100%;
+  max-width: 100%;
   overflow: hidden;
   background: #ffffff;
   color: #000000;
   border-bottom: 1px solid #000000;
-  white-space: nowrap;
+  position: relative;
 }
 
 .topbar-track{
-  display: inline-flex;
-  gap: 50px;
+  display: flex;
+  align-items: center;
+  width: max-content;
+  white-space: nowrap;
+  gap: 48px;
   padding: 9px 0;
   font-size: 12px;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 1px;
-  animation: marquee 22s linear infinite;
+  animation: marqueeLoop 24s linear infinite;
+  will-change: transform;
 }
 
+.topbar-track span{
+  flex: 0 0 auto;
+  display: inline-block;
+}
 .header-principal{
   position: sticky;
   top: 0;
@@ -210,7 +220,7 @@ main{
   inset: 0;
   opacity: 0;
   transition: opacity 1s ease;
-  background-image: url("../IMG/FONDOPANTALLA.JPG");
+  background-image: url("../IMG/FONDOPANTALLA.jpg");
   background-size: cover;
   background-position: center;
   transform: scale(1.04);
@@ -1087,9 +1097,13 @@ input[type="file"]{
   100%{ transform: translateY(0px); }
 }
 
-@keyframes marquee{
-  from{ transform: translateX(0); }
-  to{ transform: translateX(-50%); }
+@keyframes marqueeLoop{
+  0%{
+    transform: translateX(0);
+  }
+  100%{
+    transform: translateX(-50%);
+  }
 }
 
 @keyframes pulseSoft{
