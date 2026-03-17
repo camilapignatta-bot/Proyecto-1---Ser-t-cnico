@@ -9,7 +9,7 @@ html{
 body{
   margin: 0;
   font-family: Georgia, "Times New Roman", serif;
-  background-image: url("../IMG/FONDOPANTALLA.JPG");
+  background-image: url("../IMG/FONDOPANTALLA.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -22,7 +22,7 @@ body::before{
   content: "";
   position: fixed;
   inset: 0;
-  background-image: url("../IMG/FONDOPANTALLA.JPG");
+  background-image: url("../IMG/FONDOPANTALLA.jpg");
   background-size: cover;
   background-position: center;
   transform: scale(1.04);
